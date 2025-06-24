@@ -1,0 +1,40 @@
+<!-- Save as index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecureNotes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔐 SecureNotes</h1>
+      <div class="header-actions">
+        <input type="text" id="searchBar" placeholder="Search notes..." />
+        <button id="exportBtn">⬇ Export</button>
+        <button id="importBtn">⬆ Import</button>
+        <input type="file" id="importFile" accept="application/json" style="display: none;" />
+        <button id="addNoteBtn">+ New Note</button>
+      </div>
+    </header>
+
+    <section id="notesContainer"></section>
+
+    <div class="modal hidden" id="noteModal">
+      <div class="modal-content">
+        <textarea id="noteInput" placeholder="Write your secure note..."></textarea>
+        <div class="modal-actions">
+          <input type="password" id="notePassword" placeholder="Set Password" />
+          <button id="pinNoteBtn">📌 Pin</button>
+          <button id="saveNoteBtn">Save Note</button>
+          <button id="closeModalBtn">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
